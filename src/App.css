@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.appbg {
+  min-height: 100vh;
+  background-color: #282c34;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
