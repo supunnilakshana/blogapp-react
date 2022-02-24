@@ -1,4 +1,5 @@
 import React from "react";
+import PostForm from "./PostFrom";
 
 const AddpostItem = (props) => {
   return (
@@ -7,7 +8,7 @@ const AddpostItem = (props) => {
         <span className="close-icon bg-primary" onClick={props.handleClose}>
           x
         </span>
-        {props.content}
+        <PostForm closeform={props.handleClose} />
       </div>
     </div>
   );

@@ -8,17 +8,17 @@ import TestPage from "./Test/testcomponet";
 import Post from "./components/Pages/Post";
 
 function App() {
-const [loading,setLoading]=useState(true);
-  useEffect(() => {
-    const timer=setInterval(() => {
-      addpost().then((response)=>{
+// const [loading,setLoading]=useState(true);
+//   useEffect(() => {
+//     const timer=setInterval(() => {
+//       addpost().then((response)=>{
 
-        setLoading(false);
-         console.log(response);
-       });
-    }, 3000);
+//         setLoading(false);
+//          console.log(response);
+//        });
+//     }, 3000);
   
-  }, []);
+//   }, []);
 
 
   return (

@@ -53,11 +53,11 @@ function Post() {
       </div>
       {isOpen && (
         <AddpostItem
-          content={
-            <>
-              <PostForm />
-            </>
-          }
+          // content={
+          //   <>
+          //     <PostForm />
+          //   </>
+          // }
           handleClose={togglePopup}
         />
       )}

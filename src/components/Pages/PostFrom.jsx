@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { ErrorMessage, useFormik } from "formik";
+import addpost from "../../repositories/blogrepositories";
 
-function PostForm() {
+function PostForm(props) {
   //   const [message, setMessage] = useState("");
   const initialValues = {
     title: "",
@@ -9,9 +10,15 @@ function PostForm() {
     email: "",
     date: "",
   };
-
+  const [isupload, setLoading] = useState(false);
   const onSubmit = (values) => {
     console.log(values);
+    addpost(values).then((response) => {
+      setLoading(true);
+      console.log(response);
+      props.closeform();
+      console.log("added");
+    });
   };
 
   const validate = (values) => {
@@ -49,9 +56,7 @@ function PostForm() {
   };
   const formik = useFormik({
     initialValues,
-
     onSubmit,
-
     validate,
   });
   return (

@@ -1,14 +1,12 @@
 import { set,ref, } from "firebase/database";
 import { db } from "../utils/firebaseconig";
 
-function addpost(){
+function addpost(postobj){
+  var currentdate = new Date();
+  console.log(currentdate);
     return new Promise(async (resolve, reject) => {
-        const id=1;
-        await set(ref(db, `post/${id}`), {
-          id: "1",
-            msg:"hellow"
-          
-        })
+       
+        await set(ref(db, `post/${1}`), postobj)
           .then( () => {
          
             resolve("message_added");
