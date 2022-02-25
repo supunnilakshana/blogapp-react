@@ -3,8 +3,7 @@ import { db } from "../utils/firebaseconig";
 import { v4 as uuidv4 } from 'uuid';
 
 function addpost(postobj){
-  var currentdate = new Date();
-  console.log(currentdate);
+
   const pid=uuidv4();
     return new Promise(async (resolve, reject) => {
        

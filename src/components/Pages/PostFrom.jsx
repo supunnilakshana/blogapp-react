@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ErrorMessage, useFormik } from "formik";
 import addpost from "../../repositories/blogrepositories";
+import moment from "moment";
 
 function PostForm(props) {
   //   const [message, setMessage] = useState("");
@@ -12,8 +13,11 @@ function PostForm(props) {
   };
   const [isupload, setLoading] = useState(false);
   const onSubmit = (values) => {
-    console.log(values);
+    const date = moment(new Date()).format("DD/MM/YYYY").toString();
+    values.date = date;
+    console.log(date);
     addpost(values).then((response) => {
+      console.log(response);
       setLoading(true);
       console.log(response);
       props.closeform();
