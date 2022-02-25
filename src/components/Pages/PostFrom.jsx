@@ -42,15 +42,15 @@ function PostForm(props) {
       errors.email = "Email must be in correct format";
     }
 
-    if (!values.date) {
-      errors.date = "Date cannot be empty";
-    } else if (
-      !/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(
-        values.date
-      )
-    ) {
-      errors.date = "Date must be in DD/MM/YYYY format";
-    }
+    // if (!values.date) {
+    //   errors.date = "Date cannot be empty";
+    // } else if (
+    //   !/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(
+    //     values.date
+    //   )
+    // ) {
+    //   errors.date = "Date must be in DD/MM/YYYY format";
+    // }
 
     return errors;
   };
@@ -115,7 +115,7 @@ function PostForm(props) {
                 <div className="small text-danger">{formik.errors.email}</div>
               ) : null}
             </div>
-
+            {/* 
             <div className="form-group mt-3">
               <label htmlFor="Date">Date</label>
               <input
@@ -130,7 +130,7 @@ function PostForm(props) {
               {formik.touched.date && formik.errors.date ? (
                 <div className="small text-danger">{formik.errors.date}</div>
               ) : null}
-            </div>
+            </div> */}
 
             <button type="submit" className="btn btn-primary">
               Submit
